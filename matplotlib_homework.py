@@ -1,19 +1,20 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Define the x range
 x = np.linspace(-10, 10, 1000)
 
-# Define the functions
 y1 = x**2
 y2 = x * np.sin(2 * x)
 y3 = np.arctan(x)
 
-# Plot the functions
 plt.figure(figsize=(10, 6))
-plt.plot(x, y1)
-plt.plot(x, y2)
-plt.plot(x, y3)
+plt.plot(x, y1, label="f(x) = x^2")
+plt.plot(x, y2, label="f(x) = x * sin(2x)")
+plt.plot(x, y3, label="f(x) = arctan(x)")
 
-# Show the plot
+plt.title("Graphs of Functions")
+plt.xlabel("x-axis")
+plt.ylabel("f(x)")
+plt.legend()
+
 plt.show()
